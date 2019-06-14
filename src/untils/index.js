@@ -1,9 +1,6 @@
-const toStr = Function.prototype.call.bind(Object.prototype.toString);
+import toStr from './toStr';
+import isArray from './isArray';
+import isFunction from './isFunction';
+import noop from './noop';
 
-const isArray = data => toStr(data) === '[object Array]';
-
-const isFunction = data => toStr(data) === '[object Function]';
-
-const noop = function() {};
-
-export { isArray, isFunction, noop };
+export { isArray, isFunction, toStr, noop };
